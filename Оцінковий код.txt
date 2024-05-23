@@ -1,0 +1,74 @@
+#include <iostream>
+using namespace std;
+
+class tiolka{
+    public:
+    string name;
+    int siski;
+    int iq;
+    int ebalo;
+    int iz10;
+    
+};
+
+
+tiolka vvid (){
+  tiolka x;    
+  cout << "Як звати тьолку?\n";
+  cin >> x.name;
+  cout << "Який розмір цицьок у тьолки (цифрою)?\n";
+  cin >> x.siski;
+  cout << "Який iq у тьолки?\n";
+  cin >> x.iq;
+  cout << "Яка тьолка на єбало? Від 0 до 100\n";
+  cin >> x.ebalo;
+  
+  x.iz10 = ((x.siski*500) + (x.iq * 40) + (x.ebalo * 40))/1000;
+
+  return x;
+  
+  
+    
+};
+
+
+void vuvid (tiolka x){
+    
+    cout << x.name << "\n";
+    cout << "Цицьки " << x.siski << "-го розміру \n";
+    if (x.iq >= 100 )
+    {
+        cout << "Розумна" << "\n";
+    } 
+    else if (x.iq >=80)
+    {
+        cout << "Не тупа" << "\n";
+    }
+    else cout << "Тупа як валянок\n";
+    
+    if (x.ebalo >= 70 )
+    {
+        cout << "На личко дуже красива" << "\n";
+    } 
+    else if (x.ebalo >=40)
+    {
+        cout << "Норм лице" << "\n";
+    }
+    else cout << "Страшна як атомна війна\n";
+    
+    cout << "Фінальна оцінка " << x.name << " " << x.iz10 << " із 10\n";
+    
+    
+};
+
+
+int main()
+{
+    tiolka n1;
+   
+    n1 = vvid(); 
+    vuvid (n1);
+    
+
+    return 0;
+}
